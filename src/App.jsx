@@ -1,9 +1,10 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import Updates from "./pages/Updates";
 import Tools from "./pages/Tools";
-import Contact from "./pages/Contact";
+import Aggregate from "./pages/Aggregate";
+import Subjects from "./pages/Subjects";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -12,11 +13,14 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/updates" element={<Updates />} />
+          <Route path="/updates" element={<Navigate to="/#updates" replace />} />
           <Route path="/tools" element={<Tools />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/aggregate" element={<Aggregate />} />
+          <Route path="/subjects" element={<Subjects />} />
+          <Route path="/contact" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
+      <Footer />
     </>
   );
 }

@@ -1,0 +1,118 @@
+.email-contact-card {
+  padding: clamp(22px, 4vw, 34px);
+  border: 1px solid var(--home-line);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 16px 44px rgb(23 58 43 / 8%);
+}
+
+.email-contact-form {
+  display: grid;
+  gap: 18px;
+}
+
+.email-contact-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.email-contact-form label {
+  display: grid;
+  gap: 8px;
+  color: var(--home-ink);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.email-contact-form input,
+.email-contact-form textarea {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #cddbd1;
+  border-radius: 8px;
+  color: var(--home-ink);
+  background: #fff;
+  font: inherit;
+  font-size: 0.94rem;
+  font-weight: 400;
+}
+
+.email-contact-form input {
+  min-height: 48px;
+}
+
+.email-contact-form textarea {
+  min-height: 138px;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.email-contact-form input::placeholder,
+.email-contact-form textarea::placeholder {
+  color: #84938a;
+}
+
+.email-contact-submit {
+  min-height: 50px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  background: var(--jamb-green);
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.email-contact-submit:not(:disabled):hover {
+  transform: translateY(-1px);
+  background: var(--jamb-green-dark);
+}
+
+.email-contact-submit:disabled {
+  color: #fff;
+  background: #87958a;
+  cursor: not-allowed;
+}
+
+.email-contact-notice,
+.email-contact-status {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.email-contact-notice {
+  border: 1px solid #ecdcae;
+  color: #715515;
+  background: #fff9e9;
+}
+
+.email-contact-status-error {
+  border: 1px solid #efc3c0;
+  color: #8e211d;
+  background: #fff1f0;
+}
+
+.email-contact-status-success {
+  border: 1px solid #b9ddc4;
+  color: #145a35;
+  background: #eff8f1;
+}
+
+@media (max-width: 600px) {
+  .email-contact-fields {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .email-contact-submit {
+    transition: none;
+  }
+}
