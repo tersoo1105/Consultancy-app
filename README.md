@@ -23,7 +23,7 @@ The home-page contact form uses Formspree. To enable email delivery:
 2. Copy the form endpoint into a local `.env.local` file:
 
    ```text
-   VITE_FORMSPREE_ENDPOINT=https://formspree.io/f/your-form-id
+   VITE_FORMSPREE_ENDPOINT=https://formspree.io/f/mgakrvwr
    ```
 
 3. Restart the Vite development server. For deployment, add the same variable to your hosting provider’s environment settings and rebuild the site.

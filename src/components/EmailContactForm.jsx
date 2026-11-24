@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "./EmailContactForm.css";
 
-const formspreeEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT?.trim() ?? "";
+const formspreeEndpoint =
+  import.meta.env.VITE_FORMSPREE_ENDPOINT?.trim() ||
+  "https://formspree.io/f/mgakrvwr";
 const validFormspreeEndpoint =
   /^https:\/\/formspree\.io\/f\/[\w-]+\/?$/i.test(formspreeEndpoint);
 
